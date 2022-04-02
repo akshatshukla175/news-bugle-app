@@ -1,20 +1,22 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route} from "react-router-dom";
 
 import NewsCards from './components/NewsCards'
+import SearchTab from './components/SearchTab'
 import { Routes } from 'react-router-dom';
 const API_KEY = process.env.REACT_APP_KEY;
 
 function News() {
   const [data, setData] = useState([]);
-
+  const API_BASE_URL = 'https://newsapi.org/v2/everything?';
+  const API_BASE_SEARCH_KEYWORD = 'Bitcoin';
   useEffect(() => {
-    const url = 'https://newsapi.org/v2/everything?' +
-          'q=Apple&' +
+    const url = API_BASE_URL +
+          `q=${API_BASE_SEARCH_KEYWORD}&` +
           'from=2022-04-02&' +
           'sortBy=popularity&' +
-          'apiKey=a57ce69f66c642589f4848126f16cb2a';
+          'apiKey=3883022e9b294a0f9c42dfd8edfb6cd6';
     var req = new Request(url);
     console.log(req);
     const getNews = async() => {
@@ -41,9 +43,19 @@ function News() {
                   path="/"
                   exact
                   element={(
-                      <NewsCards
-                          data={data}
-                      />
+                    <div>
+                      <div>
+                        {/* <Header/> */}
+                      </div>,
+                      <div>
+                        <SearchTab/>
+                      </div>,
+                      <div>
+                        <NewsCards
+                            data={data}
+                        />
+                      </div> 
+                    </div>                
                   )}
               />
           </Routes>   
