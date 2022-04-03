@@ -45,7 +45,7 @@ const SearchTab = ({ color }) => {
                 href="#link2"
                 role="tablist"
               >
-                <i className="fas fa-cog text-base mr-1"></i>  Search By Topic
+                <i className="fas fa-cog text-base mr-1"></i>  Search By Keyword
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
