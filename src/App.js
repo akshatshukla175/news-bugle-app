@@ -5,7 +5,9 @@ import {BrowserRouter as Router,Route} from "react-router-dom";
 import NewsCards from './components/NewsCards'
 import SearchTab from './components/SearchTab'
 import Header from './components/Header'
+import Footer from './components/Footer';
 import { Routes } from 'react-router-dom';
+
 const API_KEY = process.env.REACT_APP_KEY;
 
 function News() {
@@ -52,6 +54,7 @@ function News() {
                         <NewsCards
                             data={data}
                         />
+                        <Footer/>
                     </div>                
                   )}
               />

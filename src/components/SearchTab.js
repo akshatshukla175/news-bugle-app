@@ -80,21 +80,26 @@ const SearchTab = ({ color }) => {
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <p>
-                    Search your news based on a keyword, news sources, 
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for
-                    state of the art customer service.
+                    Search your news based on a keyword ⌨️, news sources ℹ️, or simply sort by relevancy 👍, popularity 👨‍🎤, date of publish 📅.
                   </p>
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
                   <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables for
-                    real-time schemas.
-                    <br />
-                    <br /> Dramatically maintain clicks-and-mortar solutions
-                    without functional solutions.
+                    Positivity Section is a place that views wholesome and positive news articles. The color labels for different news articles denote the vibes that they bring along.
+                  </p>
+                  <br/>
+                  <p>
+                    <div>
+                    <span class="inline-circle bg-green-400 rounded-full px-4 py-1 text-sm font-semibold text-white mr-2 mb-2"> signifies positive articles</span>
+                    <span class="inline-circle bg-yellow-400 rounded-full px-4 py-1 text-sm font-semibold text-white mr-2 mb-2"> signifies neutral articles</span>
+                    <span class="inline-circle bg-red-400 rounded-full px-4 py-1 text-sm font-semibold text-white mr-2 mb-2"> signifies negative articles</span>
+                  
+                    </div>
+                  </p>
+                  <br/>
+
+                  <p>
+                    Positivity Section helps you to know about the good things happening around you by removing negative articles. 
                   </p>
                 </div>
               </div>
