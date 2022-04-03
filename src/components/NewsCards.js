@@ -26,14 +26,14 @@ const NewsCards = (props) => {
         return (   
         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white w-screen">
         <img class="w-full" src={card.urlToImage} alt="" />
-        <div class="px-6 py-4">
+        <div class="px-6 py-6">
             <div class="font-bold text-xl mb-2">{card.title}</div>
             <p class="text-gray-700 text-base">
             {card.description}
             </p>
             <a class="font-bold-text-xl" href={card.url}>Read More</a>
         </div>
-        <div class="px-6 pt-4 pb-2">
+        <div class="px-6 pt-6 pb-2">
             <span class="inline-block bg-blue-800 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">{card.source.name}</span>
             <span class="inline-block bg-blue-800 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">{getDate(card.publishedAt).toDateString()}</span>
             <span class={extractSentiment(card.content)}></span>

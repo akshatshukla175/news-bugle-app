@@ -17,7 +17,8 @@ function News() {
           `q=${API_BASE_SEARCH_KEYWORD}&` +
           'from=2022-04-02&' +
           'sortBy=relevance&' +
-          'apiKey=3883022e9b294a0f9c42dfd8edfb6cd6';
+          'apiKey=3883022e9b294a0f9c42dfd8edfb6cd6&'+
+          'pageSize=100';
     // const url="";
     var req = new Request(url);
     console.log(req);
