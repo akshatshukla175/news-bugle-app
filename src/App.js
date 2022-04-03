@@ -46,17 +46,11 @@ function News() {
                   exact
                   element={(
                     <div>
-                      <div>
                         <Header/>
-                      </div>,
-                      <div class="bg-indigo-100 py-6 md:py-12 w-screen">
                         <SearchTab/>
-                      </div>,
-                      <div class="bg-indigo-100 py-6 md:py-12 justify-center items-center w-screen">
                         <NewsCards
                             data={data}
                         />
-                      </div> 
                     </div>                
                   )}
               />

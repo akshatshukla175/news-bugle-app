@@ -4,7 +4,7 @@ const SearchTab = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap bg-indigo-100 w-screen">
         <div className="w-full">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
@@ -73,19 +73,14 @@ const SearchTab = ({ color }) => {
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                   <p>
-                    Collaboratively administrate empowered markets via
-                    plug-and-play networks. Dynamically procrastinate B2C users
-                    after installed base benefits.
+                    Explore the latest news available 🗞️ or explore a genre 🔍
                     <br />
-                    <br /> Dramatically visualize customer directed convergence
-                    without revolutionary ROI.
+
                   </p>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <p>
-                    Completely synergize resource taxing relationships via
-                    premier niche markets. Professionally cultivate one-to-one
-                    customer service with robust ideas.
+                    Search your news based on a keyword, news sources, 
                     <br />
                     <br />
                     Dynamically innovate resource-leveling customer service for
@@ -114,7 +109,7 @@ const SearchTab = ({ color }) => {
 export default function TabsRender() {
   return (
     <>
-      <SearchTab color="blue" />;
+      <SearchTab color="blue" />
     </>
   );
 }
