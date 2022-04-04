@@ -20,13 +20,15 @@ function News() {
           'from=2022-04-02&' +
           'sortBy=relevance&' +
           'apiKey=3883022e9b294a0f9c42dfd8edfb6cd6&'+
-          'pageSize=100';
+          'pageSize=99';
     // const url="";
     var req = new Request(url);
     console.log(req);
     const getNews = async() => {
       try {
-        fetch(url)
+        fetch(url,
+          {headers:{"Access-Control-Allow-Origin":"*"}}
+          )
         .then((response) => response.json())
         .then((data) => {
           setData(data);
