@@ -41,7 +41,7 @@ const NewsCards = (props) => {
         </div>
     )});
     return (
-        <div class="bg-indigo-100 mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 w-screen">    
+        <div class="bg-indigo-100 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 w-screen">    
         {newscards}
         </div>
     );  
