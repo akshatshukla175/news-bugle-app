@@ -12,7 +12,7 @@ const API_KEY = process.env.REACT_APP_KEY;
 
 function News() {
   const [data, setData] = useState([]);
-  const API_BASE_URL = 'https://newsapi.org/v2/everything?';
+  const API_BASE_URL = 'http://newsapi.org/v2/everything?';
   const API_BASE_SEARCH_KEYWORD = 'Google';
   useEffect(() => {
     const url = API_BASE_URL +
@@ -26,9 +26,7 @@ function News() {
     console.log(req);
     const getNews = async() => {
       try {
-        fetch(url,
-          {headers:{"Access-Control-Allow-Origin":"*"}}
-          )
+        fetch(req)
         .then((response) => response.json())
         .then((data) => {
           setData(data);
