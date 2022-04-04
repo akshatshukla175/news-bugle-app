@@ -12,7 +12,7 @@ const API_KEY = process.env.REACT_APP_KEY;
 
 function News() {
   const [data, setData] = useState([]);
-  const API_BASE_URL = 'http://newsapi.org/v2/everything?';
+  const API_BASE_URL = 'https://newsapi.org/v2/everything?';
   const API_BASE_SEARCH_KEYWORD = 'Google';
   useEffect(() => {
     const url = API_BASE_URL +
