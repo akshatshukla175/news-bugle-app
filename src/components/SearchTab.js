@@ -2,6 +2,7 @@ import React from "react";
 
 const SearchTab = (props) => {
   const [openTab, setOpenTab] = React.useState(1);
+  const [query, setQuery] = React.useState("")
   let color = "blue";
   console.log(props);
   return (
@@ -116,33 +117,10 @@ const SearchTab = (props) => {
                   <br/>
                   <div className="flex justify-center content-center">
                         <div class="flex"><span class="font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-indigo-600 rounded-full text-sm bg-indigo-100 items-center rounded-r-none pl-2 py-1 text-indigo-800 border-r-0 placeholder-indigo-300"><i class="fas fa-search"></i></span>
-                        <input type="text" class="px-2 py-1 h-10 w-2/3 border border-solid  border-indigo-600 rounded-full text-sm leading-snug text-indigo-700 bg-indigo-100 shadow-none outline-none focus:outline-none font-normal rounded-l-none flex-1 border-l-0 placeholder-black" placeholder="Search news ... "/>&emsp;
-                        <button class="h-10 w-20 text-white rounded-lg bg-blue-600 hover:bg-blue-800">Search</button>                        </div>
+                        <input type="text" class="px-2 py-1 h-10 w-2/3 border border-solid  border-indigo-600 rounded-full text-sm leading-snug text-indigo-700 bg-indigo-100 shadow-none outline-none focus:outline-none font-normal rounded-l-none flex-1 border-l-0 placeholder-black" onChange={event => setQuery(event.target.value)} placeholder="Search news ... "/>&emsp;
+                        <button class="h-10 w-20 text-white rounded-lg bg-blue-600 hover:bg-blue-800" onClick={props.handleSearch.bind(this,query)}>Search</button>                        </div>
                   </div>
-                  <div className="flex justify-center content-end align-end">
-                      
-                      <div class="mt-2">
-                      Sort by : &nbsp;
-                    <div>
-                      <label class="inline-flex items-center">
-                        <input type="radio" class="form-radio" name="radio" value="1" checked/>
-                        <span class="ml-2">Popularity</span>
-                      </label>
-                    </div>
-                    <div>
-                      <label class="inline-flex items-center">
-                        <input type="radio" class="form-radio" name="radio" value="2"/>
-                        <span class="ml-2">Relevancy</span>
-                      </label>
-                    </div>
-                    <div>
-                      <label class="inline-flex items-center">
-                        <input type="radio" class="form-radio" name="radio" value="3"/>
-                        <span class="ml-2">Date of Publish</span>
-                      </label>
-                    </div>
-                  </div>
-                  </div>
+
                 </div>
                   
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">

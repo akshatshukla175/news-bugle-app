@@ -64,7 +64,7 @@ function News() {
           `apiKey=${API_KEY}&`+
           `country=${country}&`+
           `language=en&`+
-          `pageSize=9`;
+          `pageSize=99`;
         setURL(new_url);
     
     
@@ -76,7 +76,7 @@ function News() {
           `sortBy=relevance&` +
           `language=en&`+
           `apiKey=${API_KEY}&`+
-          `pageSize=9`;
+          `pageSize=99`;
       setURL(new_url);
 
     }

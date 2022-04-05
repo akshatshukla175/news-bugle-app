@@ -9,7 +9,9 @@ const NewsCards = (props) => {
         return date;
     };
 
-    function getHeading(category,country) {
+    function getHeading(category,country,keyword) {
+        if(keyword !== "" )
+            return keyword;
         let value = category;
         if (value === "")
             value = country;
@@ -76,8 +78,8 @@ const NewsCards = (props) => {
     )});
     return (
         <div>
-        <div className="flex align-center justify-center font-bold text-2xl text-black"> 
-            <h1>{getHeading(props.category,props.country)} News</h1>
+        <div className="flex align-center justify-center font-bold text-2xl text-black w-screen"> 
+            <h1>{getHeading(props.category,props.country,props.keyword)} News</h1>
         </div>
         <div class="bg-indigo-100 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 w-screen">   
         {newscards}
