@@ -113,20 +113,33 @@ const SearchTab = ({ color }) => {
                   </div>
                   <br/>
                   <div className="flex justify-center content-center">
-                      <div>
-                        <div>
-                        <i class="fa fa-search text-gray-400"></i>
-                        <input type="text" class="h-14 w-96 pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none" placeholder="Search anything..."/>
-                        <button class="h-10 w-20 text-white rounded-lg bg-blue-600 hover:bg-blue-800">Search</button>
-
-                        </div>
-                      </div>
+                        <div class="flex"><span class="font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-indigo-600 rounded-full text-sm bg-indigo-100 items-center rounded-r-none pl-2 py-1 text-indigo-800 border-r-0 placeholder-indigo-300"><i class="fas fa-search"></i></span>
+                        <input type="text" class="px-2 py-1 h-10 w-2/3 border border-solid  border-indigo-600 rounded-full text-sm leading-snug text-indigo-700 bg-indigo-100 shadow-none outline-none focus:outline-none font-normal rounded-l-none flex-1 border-l-0 placeholder-black" placeholder="Search news ... "/>&emsp;
+                        <button class="h-10 w-20 text-white rounded-lg bg-blue-600 hover:bg-blue-800">Search</button>                        </div>
                   </div>
                   <div className="flex justify-center content-end align-end">
+                      
+                      <div class="mt-2">
                       Sort by : &nbsp;
-                      <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600  transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="r1" id="r1" checked /><label>Popularity</label>&emsp;
-                      <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600  transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="r2" id="r2"/><label>Relevancy</label>&emsp;
-                      <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600  transition duration-200 my-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="r3" id="r3"/><label>Date Of Publish</label>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="radio" value="1" checked/>
+                        <span class="ml-2">Popularity</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="radio" value="2"/>
+                        <span class="ml-2">Relevancy</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="radio" value="3"/>
+                        <span class="ml-2">Date of Publish</span>
+                      </label>
+                    </div>
+                  </div>
                   </div>
                 </div>
                   
@@ -138,7 +151,7 @@ const SearchTab = ({ color }) => {
                   </div>
                   <div class="flex justify-center content-center">
                     <label class="inline-flex items-center mt-3">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" checked={true}/><span class="ml-2 text-gray-700">Enable Positivity Section</span>
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" checked={false}/><span class="ml-2 text-gray-700">Enable Positivity Section</span>
                     </label>
                   </div>
                   <br/>
