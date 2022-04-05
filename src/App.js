@@ -15,12 +15,12 @@ function News() {
   const [keyword, setKeyword] = useState("");
   const [country, setCountry] = useState("");
   const [category, setCategory] = useState("general");
-  const [baseURL, setBaseURL] = useState("https://newsapi.org/v2/top-headlines?");
+  const [baseURL, setBaseURL] = useState("https://gnews.io/api/v4/top-headlines?");
   const [url, setURL] = useState([""]);
   const [positive, setPositive] = useState(false)
 
-  const API_BASE_SEARCH_URL = 'https://newsapi.org/v2/everything?';
-  const API_BASE_EXPLORE_URL = 'https://newsapi.org/v2/top-headlines?';
+  const API_BASE_SEARCH_URL = 'https://gnews.io/api/v4/search?';
+  const API_BASE_EXPLORE_URL = 'https://gnews.io/api/v4/top-headlines?';
 
   function handleKeyword(value) {
     setKeyword(value);
@@ -44,6 +44,7 @@ function News() {
   
   function handleButtonClick(value) {
     handleBaseURL(API_BASE_EXPLORE_URL);
+    handleKeyword("");
     handleCountry("");
     handleCategory("");
     if(value === "in")
@@ -55,6 +56,8 @@ function News() {
 
   function handleSearch(value) {
     handleBaseURL(API_BASE_SEARCH_URL);
+    handleCountry("");
+    handleCategory("");
     handleKeyword(value);
   }
 
@@ -66,11 +69,11 @@ function News() {
     {
       
         const new_url = baseURL +
-          `category=${category}&`+
-          `apiKey=${API_KEY}&`+
+          `topic=${category}&`+
+          `token=${API_KEY}&`+
           `country=${country}&`+
-          `language=en&`+
-          `pageSize=99`;
+          `lang=en&`+
+          `pageSize=10`;
         setURL(new_url);
     
     
@@ -80,9 +83,9 @@ function News() {
       const new_url = baseURL +
           `q=${keyword}&` +
           `sortBy=relevance&` +
-          `language=en&`+
-          `apiKey=${API_KEY}&`+
-          `pageSize=99`;
+          `lang=en&`+
+          `token=${API_KEY}&`+
+          `pageSize=10`;
       setURL(new_url);
 
     }

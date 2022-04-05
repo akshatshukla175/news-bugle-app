@@ -19,7 +19,9 @@ const NewsCards = (props) => {
             case "general":
               return "Global";
             case "global":
-               return "Global"; 
+               return "Global";
+            case "world":
+                return "Global"; 
             case "science":
                 return "Science"
             case "in":
@@ -35,7 +37,9 @@ const NewsCards = (props) => {
             case "sports":
                 return "Sports";
             case "business":
-                return "Business";         
+                return "Business";
+            case "breaking-news":
+                return "Breaking";         
             default:
                return ""; 
               // code block
@@ -62,7 +66,7 @@ const NewsCards = (props) => {
         if (props.positive === false || (props.positive === true && extractSentiment(card.content) !== `inline-circle bg-red-400 rounded-full px-4 py-1 text-sm font-semibold text-white mr-2 mb-2`))
         return (   
         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white w-screen">
-        <img class="w-full" src={card.urlToImage} alt="" />
+        <img class="w-full" src={card.image} alt="" />
         <div class="px-6 py-6">
             <div class="font-bold text-xl mb-2">{card.title}</div>
             <p class="text-gray-700 text-base">
