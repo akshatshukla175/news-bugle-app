@@ -12,18 +12,76 @@ const API_KEY = process.env.REACT_APP_KEY;
 
 function News() {
   const [data, setData] = useState([]);
-  const API_BASE_URL = 'https://newsapi.org/v2/everything?';
-  const API_BASE_SEARCH_KEYWORD = 'Google';
+  const [keyword, setKeyword] = useState("");
+  const [country, setCountry] = useState("");
+  const [category, setCategory] = useState("general");
+  const [baseURL, setBaseURL] = useState("https://newsapi.org/v2/top-headlines?");
+  const [url, setURL] = useState([""])
+
+  const API_BASE_SEARCH_URL = 'https://newsapi.org/v2/everything?';
+  const API_BASE_EXPLORE_URL = 'https://newsapi.org/v2/top-headlines?';
+
+  function handleKeyword(value) {
+    setKeyword(value);
+  }
+
+  function handleCountry(value) {
+    setCountry(value);
+  }
+
+  function handleCategory(value) {
+    setCategory(value);
+  }
+
+  function handleBaseURL(value) {
+    setBaseURL(value);
+  }
+  
+  function handleButtonClick(value) {
+    handleBaseURL(API_BASE_EXPLORE_URL);
+    handleCountry("");
+    handleCategory("");
+    if(value === "in")
+      handleCountry(value);
+    else
+      handleCategory(value);
+    
+  }
+
+  function handleSearch(value) {
+    handleBaseURL(API_BASE_SEARCH_URL);
+    handleKeyword(value);
+  }
+
   useEffect(() => {
-    const url = API_BASE_URL +
-          `q=${API_BASE_SEARCH_KEYWORD}&` +
-          'from=2022-04-02&' +
-          'sortBy=relevance&' +
-          'apiKey=3883022e9b294a0f9c42dfd8edfb6cd6&'+
-          'pageSize=99';
-    // const url="";
+
+    
+    if (baseURL === API_BASE_EXPLORE_URL)
+    {
+      
+        const new_url = baseURL +
+          `category=${category}&`+
+          `apiKey=${API_KEY}&`+
+          `country=${country}&`+
+          `language=en&`+
+          `pageSize=9`;
+        setURL(new_url);
+    
+    
+    }
+    else
+    {
+      const new_url = baseURL +
+          `q=${keyword}&` +
+          `sortBy=relevance&` +
+          `language=en&`+
+          `apiKey=${API_KEY}&`+
+          `pageSize=9`;
+      setURL(new_url);
+
+    }
+    console.log(url);
     var req = new Request(url);
-    console.log(req);
     const getNews = async() => {
       try {
         fetch(req)
@@ -36,7 +94,7 @@ function News() {
       }
     }
     getNews();
-  },[]);
+  },[baseURL, category, country, keyword, url]);
  
   
   console.log(data);
@@ -50,9 +108,15 @@ function News() {
                   element={(
                     <div>
                         <Header/>
-                        <SearchTab/>
+                        <SearchTab
+                            handleButtonClick={handleButtonClick}
+                            handleSearch={handleSearch}
+                        />
                         <NewsCards
                             data={data}
+                            keyword={keyword}
+                            country={country}
+                            category={category}
                         />
                         <Footer/>
                     </div>                

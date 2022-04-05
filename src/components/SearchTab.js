@@ -1,7 +1,9 @@
 import React from "react";
 
-const SearchTab = ({ color }) => {
+const SearchTab = (props) => {
   const [openTab, setOpenTab] = React.useState(1);
+  let color = "blue";
+  console.log(props);
   return (
     <>
       <div className="flex flex-wrap bg-indigo-100 w-screen">
@@ -77,31 +79,31 @@ const SearchTab = ({ color }) => {
                   </div> 
                     
                   <div className="grid p-3 grid-cols-9 sm:grid-cols-1 md:grid-cols-9 lg:grid-cols-9 xl:grid-cols-9 gap-3">
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"global")} >
                       Global
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"in")}>
                       India
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                      General
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"business")} >
+                      Business
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"science")}>
                       Science
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"politics")}>
                       Politics
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"technology")}>
                       Technology
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"sports")}>
                       Sports
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"entertainment")}>
                       Entertainment
                     </button>
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={props.handleButtonClick.bind(this,"health")}>
                       Health
                     </button>
                   </div>
@@ -175,10 +177,4 @@ const SearchTab = ({ color }) => {
   );
 };
 
-export default function TabsRender() {
-  return (
-    <>
-      <SearchTab color="blue" />
-    </>
-  );
-}
+export default SearchTab;

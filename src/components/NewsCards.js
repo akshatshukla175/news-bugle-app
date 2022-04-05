@@ -8,7 +8,41 @@ const NewsCards = (props) => {
         const date = new Date(isodate);
         return date;
     };
+
+    function getHeading(category,country) {
+        let value = category;
+        if (value === "")
+            value = country;
+        switch(value) {
+            case "general":
+              return "Global";
+            case "global":
+               return "Global"; 
+            case "science":
+                return "Science"
+            case "in":
+                return "India";
+            case "politics":
+                return "Politics";
+            case "technology":
+                return "Tech";
+            case "health":
+                return "Health"
+            case "entertainment":
+                return "Entertainment";
+            case "sports":
+                return "Sports";
+            case "business":
+                return "Business";         
+            default:
+               return ""; 
+              // code block
+          } 
+    }
+    
     function extractSentiment(content) {
+        if(content === null)
+            return `inline-circle bg-yellow-400 rounded-full px-4 py-1 text-sm font-semibold text-white mr-2 mb-2`;
         const val = sentiment.analyze(content).comparative;
         let color;
         if (val > 0)
@@ -41,9 +75,15 @@ const NewsCards = (props) => {
         </div>
     )});
     return (
-        <div class="bg-indigo-100 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 w-screen">    
+        <div>
+        <div className="flex align-center justify-center font-bold text-2xl text-black"> 
+            <h1>{getHeading(props.category,props.country)} News</h1>
+        </div>
+        <div class="bg-indigo-100 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 w-screen">   
         {newscards}
         </div>
+        </div>
+        
     );  
     }
     
