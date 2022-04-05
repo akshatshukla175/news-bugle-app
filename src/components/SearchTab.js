@@ -131,7 +131,7 @@ const SearchTab = (props) => {
                   </div>
                   <div class="flex justify-center content-center">
                     <label class="inline-flex items-center mt-3">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" checked={false}/><span class="ml-2 text-gray-700">Enable Positivity Section</span>
+                        <input type="checkbox" onChange={props.handlePositive.bind(this)} class="form-checkbox h-5 w-5 text-blue-600" checked={props.positive}/><span class="ml-2 text-gray-700">Enable Positivity Section</span>
                     </label>
                   </div>
                   <br/>

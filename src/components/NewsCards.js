@@ -59,6 +59,7 @@ const NewsCards = (props) => {
     if (props.data != null & props.data.articles != null) {
         const newscards = props.data.articles.map((card) => 
     { 
+        if (props.positive === false || (props.positive === true && extractSentiment(card.content) !== `inline-circle bg-red-400 rounded-full px-4 py-1 text-sm font-semibold text-white mr-2 mb-2`))
         return (   
         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white w-screen">
         <img class="w-full" src={card.urlToImage} alt="" />
@@ -75,11 +76,13 @@ const NewsCards = (props) => {
             <span class={extractSentiment(card.content)}></span>
         </div>
         </div>
-    )});
+        )
+       
+});
     return (
         <div>
-        <div className="flex align-center justify-center font-bold text-2xl text-black w-screen"> 
-            <h1>{getHeading(props.category,props.country,props.keyword)} News</h1>
+        <div className="flex align-center justify-center font-bold text-2xl text-black w-screen shadow-lg rounded "> 
+            <div>{getHeading(props.category,props.country,props.keyword)} News</div>
         </div>
         <div class="bg-indigo-100 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 w-screen">   
         {newscards}

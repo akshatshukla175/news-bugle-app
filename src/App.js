@@ -16,7 +16,8 @@ function News() {
   const [country, setCountry] = useState("");
   const [category, setCategory] = useState("general");
   const [baseURL, setBaseURL] = useState("https://newsapi.org/v2/top-headlines?");
-  const [url, setURL] = useState([""])
+  const [url, setURL] = useState([""]);
+  const [positive, setPositive] = useState(false)
 
   const API_BASE_SEARCH_URL = 'https://newsapi.org/v2/everything?';
   const API_BASE_EXPLORE_URL = 'https://newsapi.org/v2/top-headlines?';
@@ -36,6 +37,10 @@ function News() {
   function handleBaseURL(value) {
     setBaseURL(value);
   }
+
+  function handlePositive() {
+    setPositive(!positive)
+  }
   
   function handleButtonClick(value) {
     handleBaseURL(API_BASE_EXPLORE_URL);
@@ -53,6 +58,7 @@ function News() {
     handleKeyword(value);
   }
 
+
   useEffect(() => {
 
     
@@ -64,7 +70,7 @@ function News() {
           `apiKey=${API_KEY}&`+
           `country=${country}&`+
           `language=en&`+
-          `pageSize=99`;
+          `pageSize=9`;
         setURL(new_url);
     
     
@@ -76,7 +82,7 @@ function News() {
           `sortBy=relevance&` +
           `language=en&`+
           `apiKey=${API_KEY}&`+
-          `pageSize=99`;
+          `pageSize=9`;
       setURL(new_url);
 
     }
@@ -94,7 +100,7 @@ function News() {
       }
     }
     getNews();
-  },[baseURL, category, country, keyword, url]);
+  },[baseURL, category, country, keyword, url,positive]);
  
   
   console.log(data);
@@ -111,12 +117,15 @@ function News() {
                         <SearchTab
                             handleButtonClick={handleButtonClick}
                             handleSearch={handleSearch}
+                            handlePositive={handlePositive}
+                            positive={positive}
                         />
                         <NewsCards
                             data={data}
                             keyword={keyword}
                             country={country}
                             category={category}
+                            positive={positive}
                         />
                         <Footer/>
                     </div>                
