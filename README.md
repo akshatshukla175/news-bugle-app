@@ -20,13 +20,15 @@ Please leave a comment for more info on NewsBugle or to give feedback for our we
 
 ## What is different in NewsBugle?
 
-Apart from showing you hot topics from all the different news sources on a single web page, NewsBugle also allows you to search for a keyword to find news articles relevant to that keyword. NewsBugle also has a positivity section where you can filter out the negative articles by performing on the articles. 
+Apart from showing you hot topics from all the different news sources on a single web page, NewsBugle also allows you to search for a keyword to find news articles relevant to that keyword. NewsBugle also has a positivity section where you can filter out the negative articles by performing on the articles.
 
-![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/newsbugle1.png?raw=true)
+## Images
 
-![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/newsbugle2.png?raw=true)
+![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/demo-images/newsbugle1.png?raw=true)
 
-![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/newsbugle3.png?raw=true)
+![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/demo-images/newsbugle2.png?raw=true)
+
+![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/demo-images/newsbugle3.png?raw=true)
 
 
 
@@ -39,4 +41,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Article
 
-You can also go through the Medium article 
+You can also go through the Medium article discussing about NewsBugle
+
+https://medium.com/@ad.singh.arsh/newsbugle-your-one-stop-solution-for-all-the-news-da3b827037e8
+
+## Created By 
+
+Akshat Shukla https://www.linkedin.com/in/akshat-shukla-b66b4b16b/
+Arshdeep Singh https://www.linkedin.com/in/arshdeep-singh-3a3067189/
