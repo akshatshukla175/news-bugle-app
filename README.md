@@ -25,10 +25,18 @@ Apart from showing you hot topics from all the different news sources on a singl
 ## Images
 
 ![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/demo-images/newsbugle1.png?raw=true)
+<br/>
+<br/>
 
 ![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/demo-images/newsbugle2.png?raw=true)
 
+<br/>
+<br/>
+
 ![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/demo-images/newsbugle3.png?raw=true)
+
+<br/>
+<br/>
 
 
 
@@ -47,5 +55,5 @@ https://medium.com/@ad.singh.arsh/newsbugle-your-one-stop-solution-for-all-the-n
 
 ## Created By 
 
-Akshat Shukla https://www.linkedin.com/in/akshat-shukla-b66b4b16b/
+Akshat Shukla https://www.linkedin.com/in/akshat-shukla-b66b4b16b/ <br/>
 Arshdeep Singh https://www.linkedin.com/in/arshdeep-singh-3a3067189/
