@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# NewsBugle Webapp 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Your one stop solution for all the news
 
-## Available Scripts
+##  Introduction
 
-In the project directory, you can run:
+Today, in the era of internet, there are so many different news sources and websites that it is difficult to keep track of all these different sources. I bet you have encountered this problem as to which news website you should visit because there are tons of sources available on the web. Have you ever wondered how convenient it would have been if there was a website that would compile all the news articles from all the different websites to a single webpage? Well stop wondering since NewsBugle does just that.
+
+## What is NewsBugle?
+
+NewsBugle is your one stop solution for all your daily news. NewsBugle compiles all the news articles from different sources and present them at a single webpage for your convenience. Whether it be CNBC, The Wall Street Journal or BBC, NewsBugle presents all the news articles to you saving your precious time.
+
+## Deployed webapp
+
+You can checkout NewsBugle at 
+
+https://newsbugle.herokuapp.com. 
+
+Please leave a comment for more info on NewsBugle or to give feedback for our web app as well.
+
+## What is different in NewsBugle?
+
+Apart from showing you hot topics from all the different news sources on a single web page, NewsBugle also allows you to search for a keyword to find news articles relevant to that keyword. NewsBugle also has a positivity section where you can filter out the negative articles by performing on the articles. 
+
+![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/newsbugle1.png?raw=true)
+
+![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/newsbugle2.png?raw=true)
+
+![alt text](https://github.com/akshatshukla175/news-bugle-app/blob/main/newsbugle3.png?raw=true)
+
+
+
+## Local Setup
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Article
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can also go through the Medium article 
